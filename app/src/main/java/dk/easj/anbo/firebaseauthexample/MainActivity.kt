@@ -50,8 +50,9 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             R.id.action_signout -> {
                 Firebase.auth.signOut()
-                // TODO go to home screen (FirstFragment), popupto
-                   // https://developer.android.com/codelabs/android-navigation#6
+                findNavController(R.id.nav_host_fragment_content_main).popBackStack()
+                // TODO go to home screen (FirstFragment), popUpTo
+                // https://developer.android.com/codelabs/android-navigation#6
                 true
             }
             else -> super.onOptionsItemSelected(item)
