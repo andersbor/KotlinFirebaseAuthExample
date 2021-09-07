@@ -19,6 +19,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -32,6 +33,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -44,6 +46,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/button_create_user"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -51,6 +54,7 @@
             android:text="Create user" />
 
         <Button
+            android:id="@+id/sign_in"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -59,6 +63,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/messageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="" />

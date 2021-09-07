@@ -34,7 +34,7 @@ class FirstFragment : Fragment() {
             // findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
         binding.messageView.text = "Current user ${currentUser?.email}"
-        binding.buttonLogin.setOnClickListener {
+        binding.signIn.setOnClickListener {
             val email = binding.emailInputField.text.toString().trim()
             val password = binding.passwordInputField.text.toString().trim()
             if (email.isEmpty()) {
@@ -54,7 +54,7 @@ class FirstFragment : Fragment() {
                 }
             }
         }
-        binding.buttonRegister.setOnClickListener {
+        binding.buttonCreateUser.setOnClickListener {
             val email = binding.emailInputField.text.toString().trim()
             val password = binding.passwordInputField.text.toString().trim()
             if (email.isEmpty()) {
