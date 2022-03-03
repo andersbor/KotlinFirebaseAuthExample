@@ -12,5 +12,10 @@
         android:id="@+id/action_signout"
         android:orderInCategory="10"
         android:title="Sign out"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/something"
+        android:orderInCategory="20"
+        android:title="Something"
+        app:showAsAction="ifRoom" />
 </menu>

@@ -26,17 +26,17 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("dk.easj.anbo.firebaseauthexample", appContext.packageName)
 
-        onView(withText("Authentication")).check(matches(isDisplayed()));
+        onView(withText("Authentication")).check(matches(isDisplayed()))
         onView(withId(R.id.emailInputField))
             .perform(clearText())
-            .perform(typeText("anbo@secret6.dk"));
+            .perform(typeText("anbo@secret6.dk"))
         onView(withId(R.id.passwordInputField))
             .perform(clearText())
             .perform(typeText("secret6"))
-            .perform(closeSoftKeyboard());
-        onView(withId(R.id.sign_in)).perform(click());
-        pause(1000); // to wait for Firebase response to arrive
-        onView(withId(R.id.textview_second)).check(matches(withText(("Welcome anbo@secret6.dk"))));
+            .perform(closeSoftKeyboard())
+        onView(withId(R.id.sign_in)).perform(click())
+        pause(2000) // to wait for Firebase response to arrive
+        onView(withId(R.id.textview_second)).check(matches(withText(("Welcome anbo@secret6.dk"))))
     }
 
     private fun pause(millis: Long) {
